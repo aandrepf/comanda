@@ -1,0 +1,16 @@
+.col.col-btn-yes, .col.col-btn-no {
+  margin-top: 40px;
+}
+.btn-group-lg>.btn, .btn-lg {
+  padding: 1rem 1rem;
+}
+.btn-secondary {
+  background-color: inherit!important;
+}
+.col-btn-back {
+  margin-top: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 20pt;
+  padding: 20px 0;
+}

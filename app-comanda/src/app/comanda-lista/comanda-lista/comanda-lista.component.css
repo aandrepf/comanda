@@ -1,0 +1,92 @@
+.comanda-content {
+  margin-top: 30px;
+}
+.payaction-content {
+  margin-top: 10px;
+  padding: 25px 0;
+}
+.col-12.item-wpr {
+  display: block;
+  float: left;
+  margin-bottom: 7px;
+  padding: 0;
+}
+.col-6.item-info, .col-6.price-info, .col-6.total-price-info {
+  float: left;
+  padding: 0;
+}
+.card {
+  border: none;
+  border-radius: 0;
+  background-color: #212121!important;
+  text-transform: lowercase;
+}
+h4.card-title {
+  color: #fff;
+}
+.text-muted {
+  color: #fff!important;
+  opacity: 0.65;
+}
+.price-info h5.card-title {
+  color: #fff;
+  margin: 15px 0;
+  font-size: 1.8rem;
+  line-height: 3.9rem;
+  float: right;
+  text-transform: uppercase;
+}
+.total-price-info h5.card-title {
+  color: #fff;
+  font-size: 2.8rem;
+  line-height: 2.9rem;
+  float: right;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.table-dark {
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: none;
+  border-top: none;
+}
+.table td, .table th {
+  padding: .65rem;
+  vertical-align: top;
+  border-top: none;
+}
+.comanda-list {
+  max-height: 300px;
+  margin: 0 0 30px;
+}
+thead {
+  border-bottom: 4px solid #f9a825;
+}
+tbody > tr {
+  border-bottom: 4px solid #121212;
+}
+#style-3::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: transparent;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #f9a825;
+}

@@ -1,0 +1,18 @@
+<mat-button-toggle-group [multiple]="isMultiple" [vertical]="isVertical">
+  <mat-button-toggle *ngFor="let item of answers" [style.backgroundColor]="item.bgColor" (click)="getOpt(item)" value="item.idAnswer">
+    <div *ngIf="item.icon;else noicon" [style.color]="item.txtColor">
+      <i [class]="item.icon"></i> <br /> {{ item.descrAnswer }}
+    </div>
+    <ng-template #noicon>
+      <div [style.color]="item.txtColor">
+        {{ item.descrAnswer }}
+      </div>
+    </ng-template>
+
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<div style="margin-top:5%;" *ngIf="confirm.isConfirm">
+  <button (click)="doConfirm()" [style.color]="confirm.txtColor" [disabled]="isConfirmDisabled" [style.backgroundColor]="confirm.bgColor"
+    class="btn btn-lg btn-block btn-confirm" mat-button>{{ confirm.txtConfirm }}</button>
+</div>

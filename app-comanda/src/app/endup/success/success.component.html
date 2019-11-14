@@ -1,0 +1,18 @@
+<div class="row h-100 justify-content-center align-items-center">
+  <div class="col content-wrapper">
+    <div class="align-self-center">
+      <div class="loading-text">
+        <i class="fa fa-check fa-5" aria-hidden="true"></i><br>
+        <h1 class="title-error">OBRIGADO!</h1><br>
+        <strong>{{ waitMessage }}</strong> <br>
+        <small>Ficaremos felizes em saber como foi a sua experiência com nosso sistema de pagamento.</small>
+      </div>
+      <div class="col col-btn-finalizar">
+        <button type="button" class="btn btn-secondary btn-lg btn-block bttn" (click)="goBack()"><strong>FINALIZAR</strong></button>
+      </div>
+      <div class="col col-btn-avaliar">
+        <button type="button" class="btn btn-secondary btn-lg btn-block bttn" (click)="goRate()"><strong>AVALIAR EXPERIÊNCIA</strong></button>
+      </div>
+    </div>
+  </div>
+</div>

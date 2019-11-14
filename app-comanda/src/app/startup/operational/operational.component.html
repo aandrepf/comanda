@@ -1,0 +1,20 @@
+<div class="row h-100 justify-content-center align-items-center">
+  <div class="col content-wrapper">
+    <div class="align-self-center">
+      <ngx-spinner bdOpacity="0" bdColor="transparent" size="small" color="#474747" type="ball-clip-rotate" [fullScreen]="false">
+        <p class="loading-text">
+          <strong>{{ waitMessage }}</strong> <br>
+        <small>por favor aguarde</small></p>
+      </ngx-spinner>
+      <div *ngIf="!isOperational">
+        <div class="loading-text">
+          <!-- <i class="fa fa fa-exclamation-triangle fa-x brand-color animated flip" aria-hidden="true"></i> -->
+          <img src="./assets/totem-error.svg"><br>
+          <h1 class="title-error">OOPS!</h1>
+          <strong>{{ waitMessage }}</strong> <br>
+          <small>por favor procure um de nossos canais de atendimento.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

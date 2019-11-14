@@ -1,0 +1,28 @@
+.card-content {
+  border-radius: 10px !important;
+}
+
+.card-header-content {
+  background-color: transparent !important;
+  border: 0 !important
+}
+
+.card-body-content {
+  margin-bottom: 2%
+}
+
+.bond-form {
+  width: 100%;
+  font-size: 16pt !important;
+  padding: 5px;
+}
+
+.bond-full-width {
+  width: 100%;
+}
+
+.btn-confirm {
+  font-size: 18pt !important;
+  padding: 2%;
+  border-radius: 10px;
+}

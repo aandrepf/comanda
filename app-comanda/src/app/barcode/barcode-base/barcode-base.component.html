@@ -1,0 +1,45 @@
+<div class="row justify-content-top align-items-center">
+  <div class="col content-wrapper" style="padding: 0.75rem">
+    <div class="align-self-center">
+      <input type="text" id="barcode" class="form-control" aria-label="Usuário" placeholder="barcode" aria-describedby="barcode" #barcode (change)="getBarcode(barcode.value)">
+    </div>
+  </div>
+</div>
+
+<!-- TEMPLATE ESPERA CODIGO DA COMANDA VIA LEITOR -->
+<div *ngIf="printerOK;else printerVerify">
+  <div class="row justify-content-top align-items-center" style="background: #121212;margin: 0 -40px;position: fixed;width: 770px;bottom: 0;padding: 100px 50px;">
+    <div class="info-barcode" *ngIf="!showLoading;else show">
+      <p class="loading-text" style="color: #ffffff;width: 100%;font-size: 25pt;line-height: 30pt;position: relative;top: -80px;">
+        por favor posicione o código de barras da sua comanda no leitor abaixo
+      </p>
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <ng-template #show>
+      <div class="loading">
+        <svg class="spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg>
+        <p class="loading-text" style="color: #ffffff;width: 100%;font-size: 25pt;">
+          <strong>{{ waitMessage }}</strong> <br>
+          <small>por favor aguarde</small>
+        </p>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<!-- TEMPLATE DE VERIFICAÇÃO DA IMPRESSORA -->
+<ng-template #printerVerify>
+  <div class="row justify-content-top align-items-center" style="background: #121212;margin: 0 -40px;position: fixed;width: 770px;bottom: 0;padding: 100px 50px;">
+    <div class="loading">
+      <svg class="spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg>
+      <p class="loading-text" style="color: #ffffff;width: 100%;font-size: 25pt;">
+        <strong>{{ waitMessage }}</strong> <br>
+        <small>por favor aguarde</small>
+      </p>
+    </div>
+  </div>
+</ng-template>
