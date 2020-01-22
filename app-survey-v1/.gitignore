@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /e2e
+/electron
 
 # dependencies
 /node_modules
