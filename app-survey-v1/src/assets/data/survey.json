@@ -1,0 +1,249 @@
+{
+  "meta": null,
+  "ret": {
+    "survey": {
+      "brand": "",
+      "descrSurvey": "<h1>Pesquisa de Satisfação</h1>",
+      "idSurvey": 1,
+      "bgColor": "#000000",
+      "txtColor": "#FFFFFF",
+      "showDescrSurvey": false,
+      "thanksMsg": "<h2>Obrigado #CLIENTNAME# por sua opinião</h2>",
+      "useBond": true,
+      "bondConfig": {
+        "descrBond": "<h3>Ajude-nos a melhorar nossos serviços</h3><p>Campos Opcionais</p>",
+        "useCpf": true,
+        "txtCpf": "DIGITE SEU CPF",
+        "useCnpj": true,
+        "txtCnpj": "DIGITE SEU CNPJ",
+        "useAgcc": true,
+        "txtAgcc": "DIGITE SUA AGÊNCIA E CONTA",
+        "useComment": true,
+        "txtComment": "VOCÊ PODE DEIXAR SEU COMENTÁRIO",
+        "useName": true,
+        "txtName": "DIGITE SEU NOME COMPLETO",
+        "useCel": true,
+        "txtCel": "DIGITE SEU CELULAR",
+        "usePhone": true,
+        "txtPhone": "DIGITE SEU TELEFONE",
+        "useMatricula": false,
+        "txtMatricula": "DIGITE SUA MATRICULA",
+        "bgColor": "#FFFFFF",
+        "txtColor": "#000000",
+        "confirm": {
+          "bgColor": "#B40001",
+          "txtColor": "#FFFFFF",
+          "txtConfirm": "Finalizar",
+          "isConfirm": true
+        },
+        "useBarcode": false,
+        "useObs": false
+      },
+      "question": [{
+          "idQuestion": 1,
+          "descrQuestion": "<h3>Dada a sua experiência nesta agência,</br> em uma escala de <b>0</b> a <b>10</b>,</br> o quanto  você recomendaria nosso atendimento a amigos e familiares?</h3>",
+          "idQuestionTipo": 2,
+          "isMultiple": false,
+          "isVertical": false,
+          "icon": "fas fa-question fa-5x",
+          "bgColor": "#000000",
+          "txtColor": "#FFFFFF",
+          "confirm": {
+            "bgColor": "#B40001",
+            "txtColor": "#FFFFFF",
+            "txtConfirm": "CONFIRMAR",
+            "isConfirm": true
+          },
+          "answers": [{
+              "idAnswer": 0,
+              "descrAnswer": "0",
+              "idAnswerOption": 0,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 1,
+              "descrAnswer": "1",
+              "idAnswerOption": 1,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 2,
+              "descrAnswer": "2",
+              "idAnswerOption": 2,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 3,
+              "descrAnswer": "3",
+              "idAnswerOption": 3,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 4,
+              "descrAnswer": "4",
+              "idAnswerOption": 4,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 5,
+              "descrAnswer": "5",
+              "idAnswerOption": 5,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 6,
+              "descrAnswer": "6",
+              "idAnswerOption": 6,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 7,
+              "descrAnswer": "7",
+              "idAnswerOption": 7,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 8,
+              "descrAnswer": "8",
+              "idAnswerOption": 8,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 9,
+              "descrAnswer": "9",
+              "idAnswerOption": 9,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 10,
+              "descrAnswer": "10",
+              "idAnswerOption": 10,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "idQuestion": 2,
+          "descrQuestion": "<h2>Onde você foi atendido?</h2>",
+          "idQuestionTipo": 5,
+          "isMultiple": true,
+          "isVertical": true,
+          "icon": "",
+          "bgColor": "#000000",
+          "txtColor": "#FFFFFF",
+          "confirm": {
+            "bgColor": "#B40001",
+            "txtColor": "#FFFFFF",
+            "txtConfirm": "CONFIRMAR",
+            "isConfirm": true
+          },
+          "answers": [{
+              "idAnswer": 5,
+              "descrAnswer": "CAIXA ELETRÔNICO",
+              "idAnswerOption": 1,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 6,
+              "descrAnswer": "CAIXA HUMANO",
+              "idAnswerOption": 2,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 7,
+              "descrAnswer": "GERÊNCIA PESSOA FÍSICA",
+              "idAnswerOption": 3,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 8,
+              "descrAnswer": "GERÊNCIA PESSOA JURÍDICA",
+              "idAnswerOption": 4,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 9,
+              "descrAnswer": "GERENTE GERAL",
+              "idAnswerOption": 4,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            },
+            {
+              "idAnswer": 10,
+              "descrAnswer": "OUTRO",
+              "idAnswerOption": 5,
+              "icon": "",
+              "bgColor": "#616161",
+              "txtColor": "#FAFAFA",
+              "selectedBgColor": "#B40001",
+              "selectedTxtColor": "#FFFFFF"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

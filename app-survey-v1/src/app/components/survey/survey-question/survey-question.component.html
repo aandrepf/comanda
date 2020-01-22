@@ -1,0 +1,10 @@
+<div class="card card-content" [style.backgroundColor]="question.bgColor" [style.color]="question.txtColor">
+  <div *ngIf="question.icon !== ''" [style.color]="question.txtColor" style="margin-top:2%;margin-bottom:2%">
+    <i [class]="question.icon"></i>
+  </div>
+  <div class="card-header card-header-content" [innerHTML]="question.descrQuestion"></div>
+  <div class="card-body card-body-content">
+    <app-survey-answers [questionId]="question.idQuestion" [confirm]="question.confirm" [questAnswers]="question.answers"
+      [questionsResult]="results" [isMultiple]="question.isMultiple" [isVertical]="question.isVertical" (evt)="selectAnswer($event)"></app-survey-answers>
+  </div>
+</div>

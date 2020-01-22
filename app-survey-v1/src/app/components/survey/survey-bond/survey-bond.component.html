@@ -1,0 +1,42 @@
+<div class="card card-content" [style.color]="bondConfig.txtColor" [style.backgroundColor]="bondConfig.bgColor">
+
+  <div class="card-header card-header-content" [innerHTML]="bondConfig.descrBond"></div>
+
+  <div class="card-body card-body-content">
+
+    <form [formGroup]="bondForm" (ngSubmit)="onSubmit()" class="bond-form">
+
+      <mat-form-field class="bond-full-width" *ngIf="bondConfig.useComment">
+        <textarea matInput [placeholder]="bondConfig.txtComment" vkbMask="comment" ngModel [matKeyboard]="'upperCaseLayout'" formControlName="comment"></textarea>
+      </mat-form-field>
+      <mat-form-field class="bond-full-width" *ngIf="bondConfig.useName">
+        <input matInput type="text" [placeholder]="bondConfig.txtName" vkbMask="name" ngModel  [matKeyboard]="'upperCaseLayout'" formControlName="name" />
+      </mat-form-field>
+      <mat-form-field class="bond-full-width" *ngIf="bondConfig.useCel">
+        <input matInput type="text" [placeholder]="bondConfig.txtCel" vkbMask="cel" ngModel [matKeyboard]="'numberLayout'" formControlName="cel" />
+      </mat-form-field>
+      <mat-form-field class="bond-full-width" *ngIf="bondConfig.usePhone">
+        <input matInput type="text" [placeholder]="bondConfig.txtPhone" vkbMask="phone" ngModel [matKeyboard]="'numberLayout'" formControlName="phone" />
+      </mat-form-field>
+      <mat-form-field class="bond-full-width" *ngIf="bondConfig.useCpf">
+        <input matInput type="text" [placeholder]="bondConfig.txtCpf" vkbMask="cpf" ngModel [matKeyboard]="'numberLayout'" formControlName="cpf" />
+      </mat-form-field>
+      <mat-form-field class="bond-full-width" *ngIf="bondConfig.useCnpj">
+        <input matInput type="text" [placeholder]="bondConfig.txtCnpj" vkbMask="cnpj" ngModel [matKeyboard]="'numberLayout'" formControlName="cnpj" />
+      </mat-form-field>
+      <mat-form-field class="bond-full-width" *ngIf="bondConfig.useAgcc">
+        <input matInput type="text" [placeholder]="bondConfig.txtAgcc" vkbMask="agcc" ngModel [matKeyboard]="'numberLayout'" formControlName="agcc" />
+      </mat-form-field>
+      <mat-form-field class="bond-full-width" *ngIf="bondConfig.useMatricula">
+        <input matInput type="text" [placeholder]="bondConfig.txtMatricula" vkbMask="matricula" ngModel [matKeyboard]="'numberLayout'" formControlName="matricula" />
+      </mat-form-field>
+
+      <button type="submit" class="btn btn-lg btn-block btn-confirm" [style.color]="bondConfig.confirm.txtColor"
+        [style.backgroundColor]="bondConfig.confirm.bgColor" mat-button>
+        {{ bondConfig.confirm.txtConfirm }}
+      </button>
+
+    </form>
+
+  </div>
+</div>

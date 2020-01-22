@@ -1,0 +1,35 @@
+<div class="survey-content" [style.color]="survey.txtColor"
+  [ngStyle]="!isBgData64 ? { 'background-color': survey.bgColor } : { 'background-image': 'url(' + survey.bgColor + ')' }"
+  *ngIf="loading">
+
+  <div class="survey-back-content">
+    <button mat-button (click)="back()" *ngIf="pageIndex > 0 || isBondQuestion">
+      <h3><i class="fas fa-chevron-left"></i> Voltar</h3>
+    </button>
+  </div>
+
+  <div class="survey-container">
+    <div class="suvey-inner-content text-center">
+
+      <div class="survey-title-margin" *ngIf="survey.showDescrSurvey">
+        <div [innerHTML]="survey.descrSurvey"></div>
+      </div>
+
+      <app-survey-question [question]="survey.question[pageIndex]" (evt)="saveQuestion($event)"
+        [bondTempQr]="bondTempQr" *ngIf="!isBondQuestion"></app-survey-question>
+
+      <app-survey-bond (evt)="saveBond($event)" [bondConfig]="survey.bondConfig" *ngIf="isBondQuestion">
+      </app-survey-bond>
+
+    </div>
+  </div>
+
+  <div class="brand-container text-center" *ngIf="survey.brand">
+    <div class="brand-inner-content">
+      <img [src]="sanitizer.bypassSecurityTrustUrl(survey.brand)" width="250px" />
+    </div>
+  </div>
+
+</div>
+
+<ngx-spinner bdColor="rgba(51,51,51,1)" size="default" color="#FFFFFF" type="ball-clip-rotate"></ngx-spinner>

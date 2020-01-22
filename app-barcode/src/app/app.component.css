@@ -1,0 +1,16 @@
+.b1-admin-access {
+    background: transparent;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 0px;
+    z-index: 9;
+}
+.b2-admin-access {
+    background: transparent;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+}

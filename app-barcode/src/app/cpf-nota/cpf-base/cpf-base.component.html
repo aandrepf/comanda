@@ -1,0 +1,35 @@
+<div class="row h-100 justify-content-center align-items-center">
+  <div class="col content-wrapper">
+    <div class="align-self-center">
+      <p class="loading-text cpf-title" style="font-size:25pt;"><strong>deseja incluir seu cpf na nota?</strong></p>
+      <div class="col col-btn-yes">
+        <button type="button" class="btn btn-secondary btn-lg btn-block bttn" (click)="includeCPF()" ><strong>SIM</strong></button>
+      </div>
+      <div class="col col-btn-no">
+        <button type="button" class="btn btn-secondary btn-lg btn-block bttn-dark" (click)="payComanda()">
+          <strong><svg *ngIf="showLoading" class="spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg> {{ payBtnText }}</strong>
+        </button>
+      </div>
+      <div class="col col-btn-back" (click)="goBack()">
+        <p><i class="fa fa-arrow-left"></i> VOLTAR</p>
+      </div>
+    </div>
+
+    <!-- <ng-template>
+      <ng-template #comandaIndisponivel>
+        <div class="row justify-content-center align-items-center">
+          <p class="loading-text">
+            <strong>{{ msg }}</strong>
+          </p>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col content-wrapper payaction-content bttn-dark" style="margin-top: 30px;" (click)="back()">
+            <p class="loading-text">
+              <strong>voltar</strong>
+            </p>
+          </div>
+        </div>
+      </ng-template>
+    </ng-template> -->
+  </div>
+</div>

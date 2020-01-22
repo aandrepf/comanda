@@ -1,0 +1,109 @@
+<div class="row justify-content-center align-items-center">
+  <div class="col content-wrapper comanda-content">
+    <div class="align-self-center">
+      <p class="loading-text">
+        <small style="font-size: 110%">Abaixo seguem os itens da comanda nº: <strong>{{ codigo }}</strong></small>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div style="margin: 0;" *ngIf="comandaPay;else semComanda" >
+  <div class="row justify-content-center align-items-center">
+    <div class="col content-wrapper payaction-content">
+      <div ngxInfiniteScroller class="produto-wrapper" id="style-3"
+      [style.overflowY]="isScroll ? 'scroll' : 'inherit'"
+      [style.maxHeight]="isScroll ? '600px' : 'inherit'"
+      initialScrollPosition="TOP"
+      strategy="scrollingToBoth"
+      (onScrollUp)="onScrollUp()"
+      (onScrollDown)="onScrollDown()">
+        <div class="col-12 item-wpr" *ngFor="let itens of comandaPay.itens">
+          <div class="col-6 item-info">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">{{ itens.descricao }}</h4>
+                <h5 class="card-subtitle mb-2 text-muted">qtde: <strong>{{ itens.quantidade }}</strong></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 price-info">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ itens.valor | currency:'BRL':'R$ ' }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col content-wrapper payaction-content" style="padding: 0;margin: -10px 0 20px;">
+      <div class="col-6 item-info" style="background: transparent;">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title total-title" style="font-size: 1.6rem;margin: 0.37rem 0;font-weight: 400;">total</h4>
+            <p class="sevico-opc">SERVIÇOS (+)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 total-price-info" style="background: transparent;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="font-weight: 400;font-size: 1.6rem;">{{ comandaPay.total | currency:'BRL':'R$ ' }}</h5>
+            <p class="servico-total">{{ comandaPay.servico | currency:'BRL':'R$ ' }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col content-wrapper payaction-content" style="padding: 0;margin: -10px 0 10px;">
+      <div class="col-6 item-info" style="background: transparent;">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title total-title" style="font-size: 2.4rem;margin: 0.37rem 0;font-weight: 700;text-transform: uppercase;">TOTAL A PAGAR</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 total-price-info" style="background: transparent;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ comandaPay.totalPagar | currency:'BRL':'R$ ' }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col content-wrapper payaction-content bttn" (click)="payComanda()">
+      <p class="loading-text">
+        <strong>{{ payBtnText }}</strong>
+      </p>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col content-wrapper payaction-content bttn-dark" style="margin-top: 30px;" (click)="back()">
+      <p class="loading-text">
+        <strong>cancelar pagamento</strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- SE NAO EXISTIR OU COMANDA ESTÀ ZERADA -->
+<ng-template #semComanda>
+  <div class="row justify-content-center align-items-center">
+    <p class="loading-text">
+      <strong>{{ msg }}</strong>
+    </p>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col content-wrapper payaction-content bttn-dark" style="margin-top: 30px;" (click)="back()">
+      <p class="loading-text">
+        <strong>voltar</strong>
+      </p>
+    </div>
+  </div>
+</ng-template>
