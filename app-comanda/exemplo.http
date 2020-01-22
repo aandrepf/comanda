@@ -1,5 +1,0 @@
-GET http://192.168.0.19/aris-hub/api/app/version
-
-###
-
-GET http://192.168.0.19/aris-hub/api/mea/so/win/network/connect
